@@ -47,6 +47,25 @@ public class MapsPracctice {
 				
 			}
 			
+			String str = "I'm Mathew Jonas the game the fame";
+			Map<Character, Integer> countInt = new HashMap<>();
+			
+			for(int i=0; i<str.length(); i++)
+			{
+				char ch = str.charAt(i);
+				// for the first time while adding the char
+				if (!countInt.keySet().contains(ch)) {
+					countInt.put(ch, 1);
+					
+				// From second time onwards it will go to else
+				} else {
+					int val = countInt.get(ch);
+					countInt.put(ch, val + 1);
+				}
+		
+			}
+		
+			System.out.println(countInt);
 			
 		}
 
